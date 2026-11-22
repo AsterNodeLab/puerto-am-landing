@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/.session_secret
+data/usuarios.json
+data/solicitudes.json
+data/conversaciones.json
+data/auditoria.json
+*.tmp

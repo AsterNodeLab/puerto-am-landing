@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Puerto A&M | Panel administrativo</title>
+  <meta name="theme-color" content="#0B2545">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230B2545%22/><path d=%22M32 11v34M20 25c0-7 5-12 12-12s12 5 12 12M14 33a18 18 0 0 0 36 0%22 fill=%22none%22 stroke=%22%23E8C98A%22 stroke-width=%224%22 stroke-linecap=%22round%22/></svg>">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-anchor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.5V21M5 12H3a9 9 0 0 0 18 0h-2M8 11h8"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-4 2-4-2-3 2V3Z"/><path d="M9 8h6M9 12h6"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"/><path d="M10 21h4"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 14h.01M15 14h.01M9 17h6"/><circle cx="12" cy="3" r="1"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M7 8h10v4a5 5 0 0 1-10 0V8Z"/><path d="M12 17v4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20v-4h-4"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"/><path d="M15 8l4 4-4 4M19 12H9"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="6.5" rx="6" ry="2.5"/><path d="M3 6.5v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/><path d="M15 10.5c3.3 0 6 1.1 6 2.5v5c0 1.4-2.7 2.5-6 2.5s-6-1.1-6-2.5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m21 3-9.5 18-2.5-7.5L2 11l19-8Z"/><path d="m9 13.5 5-5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 4.3 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </svg>
+
+  <div class="login-pantalla" id="login-pantalla">
+    <div class="login-fondo" aria-hidden="true"></div>
+    <div class="login-caja">
+      <div class="login-marca"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span><span>Puerto <strong>A&amp;M</strong><small>Acceso administrativo</small></span></div>
+      <h2>Bienvenido de nuevo.</h2>
+      <p class="login-sub">Entra con tu cuenta para consultar el panel financiero y hablar con el agente.</p>
+      <form id="login-form" novalidate>
+        <label class="campo"><span>Correo</span><input id="login-correo" type="email" autocomplete="username" placeholder="admin@ejemplo.com" required></label>
+        <label class="campo"><span>Contraseña</span><input id="login-contrasena" type="password" autocomplete="current-password" placeholder="Tu contraseña" required></label>
+        <p class="login-error" id="login-error" role="alert" hidden></p>
+        <button class="btn btn-primary btn-lg" type="submit">Entrar al panel <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+      </form>
+      <div class="login-pie"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><span>Sin credenciales? Ejecuta <code>python -m backend.setup_admin --correo tu@correo.com</code> en el servidor.</span></div>
+      <a class="login-volver" href="/">← Volver al sitio público</a>
+    </div>
+  </div>
+
+  <div class="app" id="app" hidden>
+    <aside class="sidebar" id="sidebar" aria-label="Navegación del panel">
+      <div class="sidebar-brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span><span>Puerto <strong>A&amp;M</strong><small>Business Intelligence</small></span></div>
+      <div class="nav-grupo"><p>Análisis</p>
+        <nav>
+          <button class="nav-link activo" type="button" data-seccion="resumen"><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg> Resumen ejecutivo</button>
+          <button class="nav-link" type="button" data-seccion="ventas"><svg class="icon" aria-hidden="true"><use href="#i-receipt"></use></svg> Ventas</button>
+          <button class="nav-link" type="button" data-seccion="analisis"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg> Análisis</button>
+          <button class="nav-link" type="button" data-seccion="alertas"><svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg> Alertas <span class="nav-contador" id="nav-alertas" hidden>0</span></button>
+        </nav>
+      </div>
+      <div class="nav-grupo"><p>Operación</p>
+        <nav>
+          <button class="nav-link" type="button" data-seccion="asistente"><svg class="icon" aria-hidden="true"><use href="#i-bot"></use></svg> Agente financiero</button>
+          <button class="nav-link" type="button" data-seccion="integraciones"><svg class="icon" aria-hidden="true"><use href="#i-plug"></use></svg> Integraciones</button>
+          <button class="nav-link" type="button" data-seccion="solicitudes"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> Solicitudes</button>
+        </nav>
+      </div>
+      <div class="sidebar-pie">
+        <div class="demo-chip"><span class="punto"></span> Base DEMO · datos ficticios</div>
+        <div class="usuario"><span class="avatar" id="avatar-usuario">A</span><span><strong id="usuario-correo">admin</strong><small>Administrador</small></span></div>
+        <button class="btn-salir" id="btn-logout" type="button"><svg class="icon" aria-hidden="true"><use href="#i-logout"></use></svg> Cerrar sesión</button>
+      </div>
+    </aside>
+    <div class="overlay" id="overlay" hidden></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-izq">
+          <button class="icon-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+          <div><p class="migas">Puerto A&amp;M <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg> Panel</p><h1 id="titulo-seccion">Resumen ejecutivo</h1></div>
+        </div>
+        <div class="topbar-der">
+          <span class="estado" id="estado"><span class="estado-punto"></span><span id="estado-texto">Conectando…</span></span>
+          <button class="btn btn-secondary" id="btn-actualizar" type="button"><svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg> Actualizar</button>
+        </div>
+      </header>
+
+      <div class="contenido">
+        <section class="panel-seccion activa" id="resumen" aria-label="Resumen ejecutivo">
+          <div class="seccion-head"><div><p class="eyebrow">Vista general</p><h2>Indicadores clave</h2></div><p class="periodo" id="periodo-texto">Cargando periodo…</p></div>
+          <div class="aviso-alertas" id="alertas-resumen" hidden></div>
+          <div class="kpi-grid">
+            <article class="kpi kpi-principal"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-coins"></use></svg></span><span class="kpi-tag">Ingresos</span></div><p class="kpi-label">Ventas totales</p><p class="kpi-valor" id="kpi-ventas">—</p><p class="kpi-nota">Cantidad × precio unitario</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-receipt"></use></svg></span></div><p class="kpi-label">Pedidos</p><p class="kpi-valor" id="kpi-pedidos">—</p><p class="kpi-nota">Pedidos únicos registrados</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span></div><p class="kpi-label">Ticket promedio</p><p class="kpi-valor" id="kpi-ticket">—</p><p class="kpi-nota">Ventas ÷ pedidos</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-box"></use></svg></span></div><p class="kpi-label">Unidades vendidas</p><p class="kpi-valor" id="kpi-unidades">—</p><p class="kpi-nota">Suma de cantidades</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-coins"></use></svg></span></div><p class="kpi-label">Costo de lo vendido</p><p class="kpi-valor" id="kpi-costos">—</p><p class="kpi-nota">No incluye gastos operativos</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-up"></use></svg></span></div><p class="kpi-label">Utilidad bruta</p><p class="kpi-valor" id="kpi-utilidad">—</p><p class="kpi-nota">Ventas menos costos directos</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-percent"></use></svg></span></div><p class="kpi-label">Margen bruto</p><p class="kpi-valor" id="kpi-margen">—</p><p class="kpi-nota">Utilidad ÷ ventas</p></article>
+            <article class="kpi"><div class="kpi-top"><span class="kpi-icono"><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg></span></div><p class="kpi-label">Crecimiento mensual</p><p class="kpi-valor" id="kpi-crecimiento">—</p><p class="kpi-nota">Último mes vs. anterior</p></article>
+          </div>
+          <div class="charts-grid">
+            <article class="panel-card span8"><div class="panel-head"><div><p class="eyebrow">Tendencia</p><h3>Evolución de ventas y utilidad</h3></div></div><div class="chart-wrap"><canvas id="chart-evolucion"></canvas></div></article>
+            <article class="panel-card span4"><div class="panel-head"><div><p class="eyebrow">Composición</p><h3>Ventas por categoría</h3></div></div><div class="chart-wrap"><canvas id="chart-categorias"></canvas></div></article>
+            <article class="panel-card span6"><div class="panel-head"><div><p class="eyebrow">Objetivos</p><h3>Metas vs. resultados</h3></div></div><div class="chart-wrap"><canvas id="chart-metas"></canvas></div></article>
+            <article class="panel-card span6"><div class="panel-head"><div><p class="eyebrow">Ranking</p><h3>Productos con más ingresos</h3></div></div><div class="chart-wrap"><canvas id="chart-productos"></canvas></div></article>
+          </div>
+          <div class="panel-card fuente"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><div><p class="eyebrow">Origen de datos</p><h3 id="fuente-texto">—</h3><p>El servidor vuelve a leer el archivo en cada actualización. Los datos son ficticios y se usan sólo para demostración.</p></div></div>
+        </section>
+
+        <section class="panel-seccion" id="ventas" aria-label="Ventas" hidden>
+          <div class="seccion-head"><div><p class="eyebrow">Detalle transaccional</p><h2>Ventas registradas</h2></div><p class="periodo" id="filtros-activos">Sin filtros</p></div>
+          <div class="panel-card filtros">
+            <div class="filtro-titulo"><svg class="icon" aria-hidden="true"><use href="#i-filter"></use></svg><div><h3>Filtros de análisis</h3><p>Se aplican a todas las secciones y al agente</p></div></div>
+            <div class="filtro-campos">
+              <label class="campo"><span>Desde</span><input type="date" id="f-desde"></label>
+              <label class="campo"><span>Hasta</span><input type="date" id="f-hasta"></label>
+              <label class="campo"><span>Producto</span><select id="f-producto"><option value="">Todos</option></select></label>
+              <label class="campo"><span>Categoría</span><select id="f-categoria"><option value="">Todas</option></select></label>
+              <button class="btn btn-ghost" id="btn-limpiar" type="button">Limpiar</button>
+            </div>
+          </div>
+          <article class="panel-card"><div class="panel-head"><div><p class="eyebrow">Comparativo</p><h3>Ingresos vs. costos por mes</h3></div></div><div class="chart-wrap"><canvas id="chart-ingresos-costos"></canvas></div></article>
+          <article class="panel-card tabla-card">
+            <div class="panel-head tabla-head"><div><p class="eyebrow">Transacciones</p><h3>Detalle <span class="contador" id="contador-ventas">—</span></h3></div>
+              <div class="exportar"><span>Exportar</span><button class="btn btn-secondary" id="btn-csv" type="button"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> CSV</button><button class="btn btn-secondary" id="btn-xlsx" type="button"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> Excel</button></div>
+            </div>
+            <div class="tabla-scroll"><table><thead><tr><th>Fecha</th><th>Pedido</th><th>Producto</th><th>Categoría</th><th class="num">Cant.</th><th class="num">Ingreso</th><th class="num">Costo</th><th class="num">Utilidad</th><th>Canal</th></tr></thead><tbody id="tabla-ventas"><tr><td colspan="9" class="vacio">Cargando…</td></tr></tbody></table></div>
+            <div class="tabla-foot"><span id="tabla-info">—</span><label>Filas por página <select id="tamano-pagina"><option>10</option><option>25</option><option>50</option></select></label></div>
+          </article>
+        </section>
+
+        <section class="panel-seccion" id="analisis" aria-label="Análisis" hidden>
+          <div class="seccion-head"><div><p class="eyebrow">Profundidad</p><h2>Análisis del negocio</h2></div></div>
+          <div class="bento-admin">
+            <article class="panel-card"><div class="panel-head"><div><p class="eyebrow">Ranking</p><h3>Productos más vendidos</h3></div></div><ol class="ranking" id="ranking-productos"></ol></article>
+            <article class="panel-card"><div class="panel-head"><div><p class="eyebrow">Objetivos</p><h3>Cumplimiento por mes</h3></div></div><div class="meta-lista" id="metas-lista"></div></article>
+          </div>
+          <article class="panel-card"><div class="panel-head"><div><p class="eyebrow">Glosario</p><h3>Cómo leer estos indicadores</h3></div></div>
+            <div class="glosario">
+              <div><h4>Margen bruto</h4><p>Utilidad bruta entre ventas. Mide qué parte de cada peso queda después del costo directo; no incluye gastos operativos.</p></div>
+              <div><h4>Ticket promedio</h4><p>Ventas totales divididas entre pedidos. Resume el gasto medio por pedido.</p></div>
+              <div><h4>Costo de lo vendido</h4><p>Cantidad × costo unitario. No es lo mismo que los egresos o gastos de la empresa.</p></div>
+              <div><h4>Cumplimiento de metas</h4><p>Ventas reales comparadas con la meta del mismo mes registrada en la base.</p></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel-seccion" id="alertas" aria-label="Alertas" hidden>
+          <div class="seccion-head"><div><p class="eyebrow">Detección de anomalías</p><h2>Señales para revisar</h2></div><p class="periodo">Calculado sobre los datos de la base</p></div>
+          <div class="alertas-lista" id="alertas-lista"></div>
+        </section>
+
+        <section class="panel-seccion" id="asistente" aria-label="Agente financiero" hidden>
+          <div class="seccion-head"><div><p class="eyebrow">Agente financiero</p><h2>Pregunta con lenguaje natural</h2></div><p class="periodo">Las cifras salen de la base; nada se inventa</p></div>
+          <div class="chat-layout">
+            <article class="panel-card chat-card">
+              <div class="chat-head"><span class="chat-avatar"><svg class="icon" aria-hidden="true"><use href="#i-bot"></use></svg></span><div><strong>Agente financiero</strong><span><i class="punto-verde"></i> Conectado a la base local</span></div></div>
+              <div class="chat-body" id="chat-mensajes-admin" role="log" aria-live="polite">
+                <div class="chat-bienvenida"><strong>Listo para ayudarte.</strong><p>Puedo consultar ventas, costos, utilidad, metas y anomalías de la base disponible. Para CFDI, bancos, pagos, proveedores, caja o National Soft necesito los workflows de n8n; si no están, te lo indico en lugar de inventar datos.</p></div>
+              </div>
+              <div class="chat-sugerencias" id="chat-sugerencias-admin"></div>
+              <form class="chat-form" id="chat-form-admin">
+                <label class="sr-only" for="chat-input-admin">Pregunta para el agente</label>
+                <input id="chat-input-admin" type="text" maxlength="500" autocomplete="off" placeholder="Ej.: ¿Cómo van las ventas?">
+                <button type="submit" id="chat-enviar-admin" aria-label="Enviar pregunta"><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></button>
+              </form>
+            </article>
+            <aside class="panel-card chat-ayuda">
+              <p class="eyebrow">Prueba con</p>
+              <div class="preguntas-ejemplo">
+                <button type="button" data-pregunta="¿Cómo van las ventas?">¿Cómo van las ventas?</button>
+                <button type="button" data-pregunta="¿Cuánto gastamos este mes?">¿Cuánto gastamos este mes?</button>
+                <button type="button" data-pregunta="¿Qué facturas faltan?">¿Qué facturas faltan?</button>
+                <button type="button" data-pregunta="Detecta anomalías en los datos">Detecta anomalías</button>
+                <button type="button" data-pregunta="¿Qué es el margen bruto?">¿Qué es el margen bruto?</button>
+              </div>
+              <div class="chat-nota"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><div><strong>Privacidad</strong><p>Esta conversación es privada y queda registrada en la auditoría del panel. El asistente público de la landing no ve estas cifras.</p></div></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel-seccion" id="integraciones" aria-label="Integraciones" hidden>
+          <div class="seccion-head"><div><p class="eyebrow">Arquitectura</p><h2>Estado de las conexiones</h2></div><p class="periodo">Las credenciales nunca se muestran aquí</p></div>
+          <div class="integraciones-grid" id="integraciones-grid"></div>
+          <article class="panel-card"><div class="panel-head"><div><p class="eyebrow">Pendiente de configurar</p><h3>Integraciones sin conectar</h3></div></div><ul class="pendientes-lista" id="pendientes-lista"></ul><p class="integraciones-nota">Configura las URLs de webhook y los secretos en el archivo <code>.env</code> del servidor. El panel mostrará el cambio de estado al recargar.</p></article>
+        </section>
+
+        <section class="panel-seccion" id="solicitudes" aria-label="Solicitudes" hidden>
+          <div class="seccion-head"><div><p class="eyebrow">Bandeja de entrada</p><h2>Solicitudes de contacto</h2></div></div>
+          <article class="panel-card tabla-card"><div class="tabla-scroll"><table><thead><tr><th>Fecha</th><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Mensaje</th></tr></thead><tbody id="solicitudes-tabla"><tr><td colspan="5" class="vacio">Cargando…</td></tr></tbody></table></div></article>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/assets/vendor/chart.umd.min.js" defer></script>
+  <script src="/assets/js/admin.js" defer></script>
+</body>
+</html>

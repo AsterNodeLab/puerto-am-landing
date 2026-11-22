@@ -1,0 +1,40 @@
+name: Desplegar landing en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Sólo se publica la landing: el panel y el backend no van a Pages.
+      - name: Preparar sitio estático
+        run: |
+          mkdir -p site/css site/js
+          cp frontend/landing.html site/index.html
+          cp frontend/css/tokens.css frontend/css/landing.css site/css/
+          cp frontend/js/landing.js site/js/
+          touch site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

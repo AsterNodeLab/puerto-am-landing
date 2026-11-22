@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puerto A&M | Restaurante — Reservas y atención a tu medida</title>
+  <meta name="description" content="Puerto A&M: reserva una mesa, coordina celebraciones y resuelve tus preguntas con nuestro asistente, disponible las 24 horas.">
+  <meta name="theme-color" content="#0B2545">
+  <meta property="og:title" content="Puerto A&M | Restaurante">
+  <meta property="og:description" content="Reservas, celebraciones y atención inmediata en un solo lugar.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230B2545%22/><path d=%22M32 11v34M20 25c0-7 5-12 12-12s12 5 12 12M14 33a18 18 0 0 0 36 0%22 fill=%22none%22 stroke=%22%23E8C98A%22 stroke-width=%224%22 stroke-linecap=%22round%22/></svg>">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/landing.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-anchor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.5V21M5 12H3a9 9 0 0 0 18 0h-2M8 11h8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4L12 3Z"/><path d="M19 17.5 20 20l2.5 1-2.5 1-1 2.5-1-2.5L15.5 21l2.5-1 1-2.5Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.3 7.3L4 21l1.7-4.7A8 8 0 1 1 20 12Z"/><path d="M8.5 12h7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m21 3-9.5 18-2.5-7.5L2 11l19-8Z"/><path d="m9 13.5 5-5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20v-1.5A5.5 5.5 0 0 1 8.5 13h1A5.5 5.5 0 0 1 15 18.5V20"/><path d="M17 11a3 3 0 0 0 0-6M18 20v-1.5a5 5 0 0 0-2-4"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="contenedor header-inner">
+      <a class="brand" href="#inicio" aria-label="Puerto A&M, ir al inicio">
+        <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span>
+        <span class="brand-name">Puerto <strong>A&amp;M</strong><small>Restaurante</small></span>
+      </a>
+
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+        <a href="#menu">Menú</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#asistente">Asistente</a>
+        <a href="#contacto">Contacto</a>
+        <button class="btn btn-primary nav-cta" type="button" data-chat="Quiero reservar una mesa">Reservar mesa <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+      </nav>
+
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-principal">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="contenedor hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Puerto A&amp;M · Restaurante</p>
+          <h1 id="hero-titulo" class="reveal">Tu mesa, <em>exactamente</em> como la imaginas.</h1>
+          <p class="hero-sub reveal">Reserva, coordina una celebración y resuelve tus preguntas con un asistente que te responde de inmediato. Sin llamadas, sin esperas, sin vueltas.</p>
+          <div class="hero-acciones reveal">
+            <button class="btn btn-primary btn-lg" type="button" data-chat="Quiero reservar una mesa">Reservar una mesa <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+            <a class="btn btn-ghost btn-lg" href="#experiencia">Conocer la experiencia</a>
+          </div>
+          <ul class="hero-confianza reveal" aria-label="Por qué elegirnos">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg> Atención personalizada</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> Respuesta inmediata</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Tus datos, protegidos</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="visual-marco">
+            <div class="visual-cabecera"><span class="visual-punto"></span> Asistente Puerto A&amp;M <span class="visual-estado">En línea</span></div>
+            <div class="visual-escena">
+              <div class="plato"><span class="plato-inner"></span><span class="plato-centro"></span></div>
+              <span class="linea linea-1"></span><span class="linea linea-2"></span>
+            </div>
+            <div class="visual-chat">
+              <div class="burbuja bot">Hola, soy el asistente de Puerto A&amp;M. ¿En qué te ayudo hoy?</div>
+              <div class="burbuja user">Quiero una mesa para cuatro personas</div>
+              <div class="burbuja bot">Listo. ¿Qué día y a qué hora te gustaría?</div>
+              <div class="visual-typing"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="visual-flotante">
+            <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+            <span>Solicitud registrada</span>
+          </div>
+          <p class="visual-nota">Vista ilustrativa del asistente. Todo lo que escribes se guarda como solicitud para el equipo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion menu-demo" id="menu" aria-labelledby="menu-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion reveal">
+          <div>
+            <p class="eyebrow">Menú de demostración</p>
+            <h2 id="menu-titulo">Cocina costera, <em>sin apresurarse</em>.</h2>
+          </div>
+          <div class="menu-aviso">
+            <svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg>
+            <span>Platillos y precios ilustrativos para esta demo. No es la carta real.</span>
+          </div>
+        </div>
+
+        <div class="menu-filtros reveal" role="group" aria-label="Filtrar el menú por categoría">
+          <button class="menu-chip activo" type="button" data-categoria="todos" aria-pressed="true">Todo el menú</button>
+          <button class="menu-chip" type="button" data-categoria="entradas" aria-pressed="false">Entradas</button>
+          <button class="menu-chip" type="button" data-categoria="sopas" aria-pressed="false">Sopas</button>
+          <button class="menu-chip" type="button" data-categoria="principales" aria-pressed="false">Platos fuertes</button>
+          <button class="menu-chip" type="button" data-categoria="postres" aria-pressed="false">Postres</button>
+          <button class="menu-chip" type="button" data-categoria="bebidas" aria-pressed="false">Bebidas</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <article class="menu-categoria reveal" data-categoria="entradas">
+            <div class="menu-categoria-head"><span class="menu-num">01</span><h3>Entradas</h3></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Tostadas de atún</h4><span class="menu-precio">$145</span></div><p>Atún fresco, aguacate y mayonesa de chipotle sobre tostada crujiente.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Ceviche de pescado</h4><span class="menu-precio">$165</span></div><p>Pescado del día, limón, cilantro, cebolla morada y tostadas.</p><span class="menu-etiqueta">Recomendado</span></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Camarones al ajillo</h4><span class="menu-precio">$185</span></div><p>Camarones salteados con ajo, guajillo y aceite de oliva.</p></div>
+          </article>
+
+          <article class="menu-categoria reveal" data-categoria="sopas">
+            <div class="menu-categoria-head"><span class="menu-num">02</span><h3>Sopas</h3></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Sopa de mariscos</h4><span class="menu-precio">$175</span></div><p>Caldo de pescado con camarón, calamar y verduras de temporada.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Crema de langostinos</h4><span class="menu-precio">$160</span></div><p>Crema suave de langostinos con un toque de jerez.</p></div>
+          </article>
+
+          <article class="menu-categoria reveal" data-categoria="principales">
+            <div class="menu-categoria-head"><span class="menu-num">03</span><h3>Platos fuertes</h3></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Pescado a la talla</h4><span class="menu-precio">$295</span></div><p>Pescado parrillado con adobo rojo, ensalada y arroz.</p><span class="menu-etiqueta">Recomendado</span></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Camarones a la diabla</h4><span class="menu-precio">$285</span></div><p>Camarones en salsa de chile seco, con arroz blanco.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Pulpo al carbón</h4><span class="menu-precio">$320</span></div><p>Pulpo tierno con sal de mar, limón y mantequilla de hierbas.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Arroz a la tumbada</h4><span class="menu-precio">$275</span></div><p>Arroz caldoso con mariscos, caldo de pescado y cilantro.</p></div>
+          </article>
+
+          <article class="menu-categoria reveal" data-categoria="postres">
+            <div class="menu-categoria-head"><span class="menu-num">04</span><h3>Postres</h3></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Pie de limón</h4><span class="menu-precio">$95</span></div><p>Base de galleta, crema de limón y merengue dorado.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Flan de coco</h4><span class="menu-precio">$90</span></div><p>Flan casero con coco y caramelo ligero.</p></div>
+          </article>
+
+          <article class="menu-categoria reveal" data-categoria="bebidas">
+            <div class="menu-categoria-head"><span class="menu-num">05</span><h3>Bebidas</h3></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Agua de jamaica</h4><span class="menu-precio">$55</span></div><p>Jamaica natural, endulzada al momento.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Limonada de coco</h4><span class="menu-precio">$65</span></div><p>Limón, coco y agua de coco.</p></div>
+            <div class="menu-item"><div class="menu-item-linea"><h4>Café de olla</h4><span class="menu-precio">$45</span></div><p>Café de molienda fresca con canela y piloncillo.</p></div>
+          </article>
+        </div>
+
+        <p class="menu-pie reveal">¿Te llama la atención alguno? Escríbenos desde el asistente y lo registramos como solicitud para el equipo.</p>
+      </div>
+    </section>
+
+    <section class="seccion experiencia" id="experiencia" aria-labelledby="exp-titulo">
+      <div class="contenedor exp-grid">
+        <div class="exp-intro reveal">
+          <p class="eyebrow">La experiencia</p>
+          <h2 id="exp-titulo">Una conversación que termina en una <em>buena decisión</em>.</h2>
+          <p class="lead">Sabemos que una salida a comer empieza mucho antes de sentarse. Por eso reunimos todo lo que necesitas en un solo lugar: claro, rápido y sin fricción.</p>
+          <button class="enlace-accion" type="button" data-chat="Quiero ayuda con mi visita">Empezar una conversación <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+        </div>
+        <ol class="exp-lista">
+          <li class="reveal"><span class="num">01</span><div><h3>Llegas con una idea, te vas con un plan</h3><p>Dinos qué buscas y dejamos registrada tu solicitud con todos los detalles para que el equipo te confirme.</p></div></li>
+          <li class="reveal"><span class="num">02</span><div><h3>Celebraciones sin coordinación interminable</h3><p>Reuniones, cumpleaños y eventos privados: cuéntanos la ocasión y número de personas para revisar las opciones.</p></div></li>
+          <li class="reveal"><span class="num">03</span><div><h3>Respuestas cuando las necesitas</h3><p>El asistente está disponible aquí, incluso fuera del horario de atención, y registra cada solicitud para darle seguimiento.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="seccion servicios" id="servicios" aria-labelledby="serv-titulo">
+      <div class="contenedor">
+        <div class="cabecera-seccion reveal">
+          <div><p class="eyebrow">Servicios</p><h2 id="serv-titulo">Todo lo que necesitas, a un mensaje de distancia.</h2></div>
+          <p class="cabecera-nota">El asistente puede ayudarte con esto y registrarlo para el equipo de Puerto A&amp;M.</p>
+        </div>
+        <div class="bento">
+          <article class="tarjeta-servicio reveal">
+            <span class="serv-icono"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg></span>
+            <h3>Reservaciones</h3>
+            <p>Indica día, hora aproximada y número de personas. Tu solicitud queda lista para confirmación.</p>
+            <button class="tarjeta-link" type="button" data-chat="Quiero reservar una mesa">Reservar <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </article>
+          <article class="tarjeta-servicio reveal">
+            <span class="serv-icono"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg></span>
+            <h3>Eventos privados</h3>
+            <p>Celebraciones y reuniones: cuéntanos la ocasión y el tamaño del grupo para revisar opciones contigo.</p>
+            <button class="tarjeta-link" type="button" data-chat="Quiero solicitar un evento privado">Solicitar <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </article>
+          <article class="tarjeta-servicio reveal">
+            <span class="serv-icono"><svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg></span>
+            <h3>Preguntas frecuentes</h3>
+            <p>Horarios, ubicación y formas de contacto. Si algo no está confirmado, el asistente no lo inventa.</p>
+            <button class="tarjeta-link" type="button" data-chat="Tengo una pregunta sobre el servicio">Preguntar <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </article>
+          <article class="tarjeta-servicio reveal">
+            <span class="serv-icono"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+            <h3>Solicitudes especiales</h3>
+            <p>¿Buscas algo concreto? Déjalo por escrito y el equipo te responde con lo que sea posible.</p>
+            <button class="tarjeta-link" type="button" data-chat="Tengo una solicitud especial">Escribir <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion asistente-seccion" id="asistente" aria-labelledby="asistente-titulo">
+      <div class="contenedor asistente-grid">
+        <div class="asistente-copy reveal">
+          <p class="eyebrow">Atención inteligente</p>
+          <h2 id="asistente-titulo">Un asistente que escucha, registra y <em>no inventa</em>.</h2>
+          <p class="lead">Responde preguntas sobre el servicio, toma solicitudes y las deja listas para el equipo. Si no tiene información confirmada, lo dice con claridad en lugar de improvisar.</p>
+          <ul class="check-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Disponible desde esta misma página, sin apps ni registros.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Cada solicitud queda guardada para darle seguimiento.</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> La información financiera del restaurante es privada y nunca aparece aquí.</li>
+          </ul>
+          <button class="btn btn-primary btn-lg" type="button" data-chat="Hola, ¿en qué puedes ayudarme?">Abrir asistente <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+        </div>
+        <div class="asistente-panel reveal">
+          <div class="panel-cabecera"><span class="panel-avatar"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span><div><strong>Asistente Puerto A&amp;M</strong><span><i class="punto-verde"></i> Disponible ahora</span></div></div>
+          <div class="panel-mensajes" aria-hidden="true">
+            <div class="burbuja bot">¡Hola! Puedo ayudarte con reservas, eventos y preguntas sobre el servicio. ¿Qué necesitas?</div>
+            <div class="burbuja user">¿Pueden ayudarme con una cena de aniversario?</div>
+            <div class="burbuja bot">Claro. Cuéntame la fecha aproximada y cuántas personas serían, y registro tu solicitud.</div>
+          </div>
+          <div class="panel-sugerencias" aria-hidden="true"><span>Quiero reservar</span><span>Evento privado</span><span>Horarios</span></div>
+          <div class="panel-input" aria-hidden="true">Escribe tu mensaje… <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion faq" id="faq" aria-labelledby="faq-titulo">
+      <div class="contenedor faq-grid">
+        <div class="faq-intro reveal"><p class="eyebrow">Preguntas frecuentes</p><h2 id="faq-titulo">Antes de escribirnos.</h2><p class="lead">Si no encuentras tu respuesta, el asistente puede registrar tu solicitud para el equipo.</p></div>
+        <div class="faq-lista reveal">
+          <details><summary>¿Cómo reservo una mesa? <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></summary><p>Toca «Reservar una mesa», escribe el día, la hora aproximada y el número de personas. El asistente registra tu solicitud y el equipo te confirma la disponibilidad.</p></details>
+          <details><summary>¿El menú que aparece es la carta real? <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></summary><p>No. Es un menú de demostración de cocina costera con platillos y precios ilustrativos. La carta definitiva se publicará cuando el restaurante la confirme.</p></details>
+          <details><summary>¿Puedo organizar un evento privado? <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></summary><p>Sí. Cuéntanos el tipo de celebración, la fecha aproximada y cuántas personas participarían. Con esos datos el equipo puede revisar las opciones contigo.</p></details>
+          <details><summary>¿El asistente tiene acceso a información financiera? <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></summary><p>No. Las cifras de ventas, facturas, bancos y proveedores son privadas del restaurante y no se muestran en este sitio ni en el asistente.</p></details>
+          <details><summary>¿Qué pasa con mis datos? <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></summary><p>Tu mensaje se guarda como una solicitud para que el equipo pueda responderte. No se publica en esta página ni se comparte con terceros desde el sitio.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contacto" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto-grid">
+        <div class="contacto-copy reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-titulo">Cuéntanos qué necesitas.</h2>
+          <p class="lead">Completa el formulario y tu mensaje quedará registrado para el equipo de Puerto A&amp;M.</p>
+          <div class="datos-contacto">
+            <div data-config="direccion" hidden><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><span></span></div>
+            <div data-config="horario" hidden><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span></span></div>
+            <div data-config="email" hidden><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><span></span></div>
+            <div data-config="whatsapp" hidden><svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg><a rel="noopener" target="_blank"></a></div>
+          </div>
+          <p class="contacto-nota">Si aún no publicamos horarios o ubicación aquí, el asistente te ayudará a dejar tu solicitud.</p>
+        </div>
+        <form class="formulario reveal" id="form-contacto" novalidate>
+          <div class="campo"><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required></div>
+          <div class="campo"><label for="c-correo">Correo</label><input id="c-correo" name="correo" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" required></div>
+          <div class="campo"><label for="c-telefono">Teléfono <span>(opcional)</span></label><input id="c-telefono" name="telefono" type="tel" autocomplete="tel" placeholder="Tu número"></div>
+          <div class="campo"><label for="c-mensaje">Mensaje</label><textarea id="c-mensaje" name="mensaje" rows="4" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea></div>
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-primary btn-lg" type="submit">Enviar solicitud <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          <p class="form-estado" id="form-estado" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="cta-titulo">
+      <div class="contenedor cta-inner reveal">
+        <div><p class="eyebrow">Empecemos</p><h2 id="cta-titulo">Tu próxima visita empieza con un mensaje.</h2></div>
+        <button class="btn btn-claro btn-lg" type="button" data-chat="Quiero reservar una mesa">Hablar con el asistente <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor footer-inner">
+      <div class="footer-brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span><span>Puerto <strong>A&amp;M</strong></span></div>
+      <nav aria-label="Enlaces del pie de página"><a href="#menu">Menú</a><a href="#experiencia">Experiencia</a><a href="#servicios">Servicios</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></nav>
+      <div class="footer-legal"><small>© <span id="anio">2026</span> Puerto A&amp;M · La información financiera es privada y no se publica aquí.</small><a href="/admin" class="admin-link" hidden><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> Área administrativa</a></div>
+    </div>
+  </footer>
+
+  <div class="chat-widget" id="chat-widget">
+    <button class="chat-lanzador" id="chat-lanzador" type="button" aria-label="Abrir asistente" aria-expanded="false" aria-controls="chat-panel">
+      <svg class="icon icon-chat" aria-hidden="true"><use href="#i-chat"></use></svg><svg class="icon icon-cerrar" aria-hidden="true"><use href="#i-x"></use></svg>
+      <span class="chat-badge" aria-hidden="true"></span>
+    </button>
+    <section class="chat-panel" id="chat-panel" role="dialog" aria-label="Asistente de Puerto A&M" aria-modal="false" hidden>
+      <header class="chat-cabecera">
+        <div class="chat-identidad"><span class="chat-avatar"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span><div><strong>Asistente Puerto A&amp;M</strong><span><i class="punto-verde"></i> En línea</span></div></div>
+        <button class="chat-cerrar" id="chat-cerrar" type="button" aria-label="Cerrar asistente"><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button>
+      </header>
+      <div class="chat-mensajes" id="chat-mensajes" role="log" aria-live="polite" aria-label="Conversación">
+        <div class="chat-bienvenida"><strong>Hola, soy Marina.</strong><p>Tu anfitriona en Puerto A&amp;M. Puedo apartarte una mesa, tomar tu pedido del menú costero y recomendarte qué probar. ¿Qué te gustaría hacer?</p></div>
+      </div>
+      <div class="chat-sugerencias" id="chat-sugerencias"></div>
+      <form class="chat-form" id="chat-form">
+        <label class="sr-only" for="chat-input">Escribe tu mensaje</label>
+        <input id="chat-input" name="mensaje" type="text" maxlength="500" autocomplete="off" placeholder="Escribe tu mensaje…">
+        <button type="submit" aria-label="Enviar mensaje"><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></button>
+      </form>
+      <p class="chat-aviso">Reservas y pedidos se registran como solicitudes de demostración. No se realizan cobros.</p>
+    </section>
+  </div>
+
+  <script src="/assets/js/landing.js" defer></script>
+</body>
+</html>

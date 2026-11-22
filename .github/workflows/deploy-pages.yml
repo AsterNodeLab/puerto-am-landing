@@ -30,6 +30,7 @@ jobs:
           cp frontend/landing.html site/index.html
           cp frontend/css/tokens.css frontend/css/landing.css site/css/
           cp frontend/js/landing.js site/js/
+          sed -i 's#/assets/css/#css/#g; s#/assets/js/#js/#g' site/index.html
           touch site/.nojekyll
 
       - uses: actions/configure-pages@v5

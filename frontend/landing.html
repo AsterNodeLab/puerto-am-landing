@@ -5,19 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Puerto A&M | Restaurante — Reservas y atención a tu medida</title>
   <meta name="description" content="Puerto A&M: reserva una mesa, coordina celebraciones y resuelve tus preguntas con nuestro asistente, disponible las 24 horas.">
-  <meta name="theme-color" content="#0B2545">
+  <meta name="theme-color" content="#0A1F44">
   <meta property="og:title" content="Puerto A&M | Restaurante">
   <meta property="og:description" content="Reservas, celebraciones y atención inmediata en un solo lugar.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230B2545%22/><path d=%22M32 11v34M20 25c0-7 5-12 12-12s12 5 12 12M14 33a18 18 0 0 0 36 0%22 fill=%22none%22 stroke=%22%23E8C98A%22 stroke-width=%224%22 stroke-linecap=%22round%22/></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230A1F44%22/><path d=%22M60 32 44 30.5C39 25 29 23 19 27L8 21c2 6 3 9 4 11-1 2-2 5-4 11l11-6c10 4 20 2 25-4Z%22 fill=%22%23FAF7F0%22/></svg>">
   <link rel="stylesheet" href="/assets/css/tokens.css">
   <link rel="stylesheet" href="/assets/css/landing.css">
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="pez-cuerpo" viewBox="0 0 250 100">
+      <path d="M246 50 198 46.5v7Z"/>
+      <path d="M198 46C188 37 168 31 142 31 112 31 82 40 50 47.5v5C82 60 112 69 142 69c26 0 46-6 56-15Z"/>
+      <path d="M158 32C150 16 130 7 104 5c8 9 14 19 18 27Z"/>
+      <path d="M72 42c-4-6-9-8-13-8 2 4 3 8 4 11Z"/>
+      <path d="M112 68c-6 8-12 12-20 14 4-6 6-10 8-14Z"/>
+      <path d="M170 62c-6 14-18 24-32 28 8-10 12-18 14-26Z"/>
+      <path d="M196 54C186 62 166 67 142 67.5 116 67.5 92 62 70 55c26 5 50 5 76 3 22-1 40-2 50-6Z" fill="#E7F0FF" fill-opacity=".55"/>
+      <path d="M178 40c3 5 3 12 0 18" fill="none" stroke="#FAF7F0" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="190" cy="47" r="2.6" fill="#FAF7F0"/><circle cx="190.4" cy="47" r="1.1" fill="#0A1F44"/>
+    </symbol>
+    <symbol id="pez-cola" viewBox="0 0 250 100">
+      <path d="M52 48C42 45 31 34 20 14c8 20 11 30 16 36-5 6-8 16-16 36 11-20 22-31 32-34Z"/>
+    </symbol>
     <symbol id="i-anchor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.5V21M5 12H3a9 9 0 0 0 18 0h-2M8 11h8"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
@@ -40,11 +54,11 @@
   <header class="site-header" id="site-header">
     <div class="contenedor header-inner">
       <a class="brand" href="#inicio" aria-label="Puerto A&M, ir al inicio">
-        <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span>
+        <span class="brand-mark"><svg class="icon pez-logo" viewBox="0 0 250 100" aria-hidden="true"><use href="#pez-cuerpo"></use><use href="#pez-cola"></use></svg></span>
         <span class="brand-name">Puerto <strong>A&amp;M</strong><small>Restaurante</small></span>
       </a>
 
-      <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal" hidden>
         <a href="#menu">Menú</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#servicios">Servicios</a>
@@ -82,7 +96,7 @@
           <div class="visual-marco">
             <div class="visual-cabecera"><span class="visual-punto"></span> Asistente Puerto A&amp;M <span class="visual-estado">En línea</span></div>
             <div class="visual-escena">
-              <div class="plato"><span class="plato-inner"></span><span class="plato-centro"></span></div>
+              <div class="plato"><span class="plato-inner"></span><svg class="plato-ola" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg><svg class="pez pez-ojo" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></div>
               <span class="linea linea-1"></span><span class="linea linea-2"></span>
             </div>
             <div class="visual-chat">
@@ -98,6 +112,15 @@
           </div>
           <p class="visual-nota">Vista ilustrativa del asistente. Todo lo que escribes se guarda como solicitud para el equipo.</p>
         </div>
+      </div>
+
+      <div class="hero-mar" aria-hidden="true">
+        <svg class="ola ola-1" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg>
+        <div class="pez-nada pez-lejano"><svg class="pez" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></div>
+        <div class="pez-nada"><svg class="pez" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></div>
+        <div class="pez-salto"><svg class="pez" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></div>
+        <svg class="ola ola-2" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg>
+        <svg class="ola ola-3" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg>
       </div>
     </section>
 
@@ -179,6 +202,11 @@
       </div>
     </section>
 
+    <div class="ola-divisor " aria-hidden="true">
+      <svg class="ola-d" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg>
+      <span class="pez-mini reveal"><svg class="pez" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></span>
+    </div>
+
     <section class="seccion servicios" id="servicios" aria-labelledby="serv-titulo">
       <div class="contenedor">
         <div class="cabecera-seccion reveal">
@@ -214,6 +242,11 @@
       </div>
     </section>
 
+    <div class="ola-divisor ola-divisor--a-marino" aria-hidden="true">
+      <svg class="ola-d" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg>
+      <span class="pez-mini reveal"><svg class="pez" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></span>
+    </div>
+
     <section class="seccion asistente-seccion" id="asistente" aria-labelledby="asistente-titulo">
       <div class="contenedor asistente-grid">
         <div class="asistente-copy reveal">
@@ -239,6 +272,11 @@
         </div>
       </div>
     </section>
+
+    <div class="ola-divisor ola-divisor--de-marino" aria-hidden="true">
+      <svg class="ola-d" viewBox="0 0 2400 120" preserveAspectRatio="none"><path d="M0 60C150 20 450 100 600 60S1050 100 1200 60 1650 100 1800 60 2250 100 2400 60V120H0Z"/></svg>
+      <span class="pez-mini reveal"><svg class="pez" viewBox="0 0 250 100"><use href="#pez-cuerpo"></use><g class="pez-cola"><use href="#pez-cola"></use></g></svg></span>
+    </div>
 
     <section class="seccion faq" id="faq" aria-labelledby="faq-titulo">
       <div class="contenedor faq-grid">
@@ -289,7 +327,7 @@
 
   <footer class="site-footer">
     <div class="contenedor footer-inner">
-      <div class="footer-brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-anchor"></use></svg></span><span>Puerto <strong>A&amp;M</strong></span></div>
+      <div class="footer-brand"><span class="brand-mark"><svg class="icon pez-logo" viewBox="0 0 250 100" aria-hidden="true"><use href="#pez-cuerpo"></use><use href="#pez-cola"></use></svg></span><span>Puerto <strong>A&amp;M</strong></span></div>
       <nav aria-label="Enlaces del pie de página"><a href="#menu">Menú</a><a href="#experiencia">Experiencia</a><a href="#servicios">Servicios</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></nav>
       <div class="footer-legal"><small>© <span id="anio">2026</span> Puerto A&amp;M · La información financiera es privada y no se publica aquí.</small><a href="/admin" class="admin-link" hidden><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> Área administrativa</a></div>
     </div>

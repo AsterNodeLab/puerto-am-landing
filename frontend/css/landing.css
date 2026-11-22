@@ -284,3 +284,122 @@
   .footer-legal { flex-direction: column; align-items: flex-start; }
   .faq-lista details p { padding-right: 0; }
 }
+
+/* ==========================================================
+   Costero · azul Meta + hueso, oleaje y pez espada
+   ========================================================== */
+
+.brand-mark { color: var(--bg); background: var(--navy-deep); }
+.brand-mark .pez-logo { width: 32px; height: 13px; fill: currentColor; stroke: none; }
+.brand-mark .pez-logo use:last-child { transition: transform .4s var(--ease); transform-box: fill-box; transform-origin: 100% 50%; }
+.brand:hover .pez-logo use:last-child { transform: rotate(12deg); }
+.site-header { background: color-mix(in srgb, var(--bg) 86%, transparent); }
+
+/* Tipografía elegante */
+h1 em, h2 em { font-style: italic !important; font-weight: 500; }
+.hero-copy h1 { font-weight: 600; letter-spacing: -.03em; line-height: 1.04; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; opacity: .6; }
+.menu-num, .menu-etiqueta { color: var(--brass); }
+.menu-etiqueta { border-color: color-mix(in srgb, var(--brass) 45%, var(--border)); }
+
+/* Pez base */
+.pez { display: block; fill: currentColor; stroke: none; overflow: visible; }
+.pez-cola { transform-box: fill-box; transform-origin: 100% 50%; animation: coletazo .9s ease-in-out infinite alternate; }
+@keyframes coletazo { from { transform: rotate(-11deg); } to { transform: rotate(11deg); } }
+@keyframes boya { from { transform: translateY(-4px) rotate(-1.6deg); } to { transform: translateY(5px) rotate(1.6deg); } }
+@keyframes oleaje { to { transform: translateX(-50%); } }
+
+/* Hero: mar */
+.hero {
+  padding-bottom: clamp(210px, 24vw, 290px);
+  background:
+    radial-gradient(60% 50% at 85% 0%, rgb(8 102 255 / .10), transparent 70%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg) 55%, #EAF2FF 100%);
+}
+.hero-grid { z-index: 2; }
+.hero-mar { position: absolute; left: 0; right: 0; bottom: 0; height: 240px; z-index: 1; pointer-events: none; }
+.ola { position: absolute; left: 0; width: 200%; max-width: none; will-change: transform; animation: oleaje 26s linear infinite; fill: var(--accent); }
+.ola-1 { bottom: 74px; height: 120px; opacity: .22; animation-duration: 30s; }
+.ola-2 { bottom: 30px; height: 112px; opacity: .72; animation-duration: 20s; animation-direction: reverse; }
+.ola-3 { bottom: -2px; height: 92px; fill: var(--accent-strong); animation-duration: 15s; }
+
+.pez-nada { position: absolute; left: 0; bottom: 74px; width: clamp(96px, 12vw, 160px); color: var(--navy-deep); animation: nada 32s linear infinite; }
+.pez-nada .pez { animation: boya 3.4s ease-in-out infinite alternate; }
+.pez-lejano { bottom: 112px; width: clamp(54px, 6vw, 80px); opacity: .35; animation-duration: 48s; animation-delay: -18s; }
+@keyframes nada { from { transform: translateX(-24vw); } to { transform: translateX(112vw); } }
+
+.pez-salto { position: absolute; left: 6%; bottom: 84px; width: clamp(110px, 13vw, 170px); color: var(--accent-strong); opacity: 0; animation: salto 14s linear 1.5s infinite; }
+@keyframes salto {
+  0%   { opacity: 0; transform: translate(0, 54px) rotate(-58deg); animation-timing-function: ease-out; }
+  3%   { opacity: 1; }
+  14%  { transform: translate(15vw, -118px) rotate(-3deg); animation-timing-function: ease-in; }
+  26%  { opacity: 1; transform: translate(30vw, 54px) rotate(60deg); }
+  28%, 100% { opacity: 0; transform: translate(30vw, 54px) rotate(60deg); }
+}
+
+/* Ojo de buey con pez espada (hero) */
+.plato {
+  overflow: hidden;
+  border: 10px solid var(--gold);
+  background:
+    radial-gradient(circle at 32% 26%, rgb(255 255 255 / .32), transparent 42%),
+    linear-gradient(180deg, #2C86FF 0%, var(--accent) 38%, var(--accent-strong) 78%, var(--navy-deep) 100%);
+  box-shadow: inset 0 0 0 3px rgb(10 31 68 / .35), inset 0 0 44px rgb(10 31 68 / .45), 0 20px 60px rgb(0 0 0 / .3);
+}
+.plato-inner { z-index: 2; width: 100%; height: 100%; border: 0; box-shadow: inset 0 0 0 2px rgb(232 201 138 / .35); }
+.plato-ola { position: absolute; left: 0; bottom: 0; width: 200%; height: 34%; max-width: none; fill: rgb(250 247 240 / .16); animation: oleaje 9s linear infinite; }
+.pez-ojo { position: absolute; width: 74%; left: 13%; top: 34%; color: var(--bg); animation: boya 3.2s ease-in-out infinite alternate; filter: drop-shadow(0 6px 10px rgb(10 31 68 / .35)); }
+
+/* Texturas marinas sutiles */
+.menu-demo, .experiencia {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 12c6-8 18-8 24 0s18 8 24 0' fill='none' stroke='%230866FF' stroke-opacity='.07' stroke-width='1.2'/%3E%3C/svg%3E");
+}
+.experiencia { border-bottom: 0; }
+.asistente-seccion {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 12c6-8 18-8 24 0s18 8 24 0' fill='none' stroke='%23FFFFFF' stroke-opacity='.06' stroke-width='1.2'/%3E%3C/svg%3E"), radial-gradient(70% 90% at 90% 10%, rgb(8 102 255 / .35), transparent 70%);
+}
+.menu-categoria-head { background: linear-gradient(to right, var(--accent-soft), transparent 70%); margin: calc(var(--s-5) * -1) calc(var(--s-5) * -1) var(--s-2); padding: var(--s-4) var(--s-5); border-radius: var(--r-md) var(--r-md) 0 0; }
+
+/* Divisores de olas con pez que aparece al hacer scroll */
+.ola-divisor { position: relative; height: clamp(46px, 6vw, 84px); overflow: hidden; background: var(--surface-2); margin-bottom: -1px; --pez: var(--accent); }
+.ola-d { position: absolute; left: 0; bottom: -1px; width: 200%; max-width: none; height: 100%; fill: var(--bg); animation: oleaje 24s linear infinite; }
+.ola-divisor--a-marino { background: var(--bg); }
+.ola-divisor--a-marino .ola-d { fill: var(--navy-deep); }
+.ola-divisor--de-marino { background: var(--navy-deep); --pez: var(--accent-soft); }
+.ola-divisor--de-marino .ola-d { fill: var(--bg); }
+.pez-mini { position: absolute; left: 0; bottom: 38%; width: 56px; color: var(--pez); opacity: 0; transform: translateX(-70px); }
+.pez-mini .pez { animation: boya 2.4s ease-in-out infinite alternate; }
+.pez-mini.visible { animation: cruza 8s ease-in-out .2s 1 forwards; }
+@keyframes cruza {
+  0%   { opacity: 0; transform: translateX(-70px); }
+  8%   { opacity: .95; }
+  92%  { opacity: .95; }
+  100% { opacity: 0; transform: translateX(calc(100vw + 20px)); }
+}
+
+/* Cuerda náutica en el cierre y pie */
+.cta-final { position: relative; background: linear-gradient(120deg, var(--navy-deep), var(--accent-strong) 70%, var(--accent)); }
+.cta-final::before { content: ""; position: absolute; inset: 0 0 auto; height: 8px; background: repeating-linear-gradient(115deg, #E8C98A 0 7px, #B9985A 7px 14px); }
+.site-footer { background: var(--surface-2); border-top: 1px solid var(--border); }
+
+.btn-primary { box-shadow: 0 8px 22px rgb(8 102 255 / .28); }
+.btn-ghost { border-color: color-mix(in srgb, var(--navy-deep) 25%, transparent); }
+
+@media (max-width: 560px) {
+  .hero-mar { height: 200px; }
+  .ola-1 { bottom: 62px; } .ola-2 { bottom: 24px; height: 96px; } .ola-3 { height: 76px; }
+  .pez-nada { bottom: 78px; } .pez-lejano { bottom: 108px; }
+  .pez-salto { bottom: 82px; left: 2%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ola, .ola-d, .plato-ola, .pez-nada, .pez-nada .pez, .pez-salto, .pez-cola, .pez-ojo, .pez-mini .pez, .pez-mini.visible { animation: none !important; }
+  .pez-nada { transform: translateX(62vw); }
+  .pez-lejano { transform: translateX(22vw); }
+  .pez-salto { opacity: 0; }
+  .pez-mini { opacity: .9; transform: translateX(18vw); }
+}
+
+/* Corrige: .chat-panel{display:flex} anulaba el atributo hidden y el chat aparecía abierto al cargar */
+.chat-panel[hidden] { display: none; }

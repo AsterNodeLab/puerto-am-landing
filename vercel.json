@@ -2,10 +2,16 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "buildCommand": "",
-  "installCommand": "",
   "outputDirectory": "frontend",
   "cleanUrls": true,
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{backend/**,data/**,knowledge/**,frontend/**,SOUL.md}",
+      "maxDuration": 30
+    }
+  },
   "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" },
     { "source": "/", "destination": "/landing.html" },
     { "source": "/assets/:path*", "destination": "/:path*" }
   ]
